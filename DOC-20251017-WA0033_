@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Ikechukwu Okoronkwo | Energy Sector Leader</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #1a365d;
+            --secondary: #c9ab81;
+            --accent: #008753;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1565374399545-0cbab8bda6a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--primary);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d4b992;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .bio-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .bio-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .bio-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .bio-text {
+            flex: 1;
+        }
+
+        .bio-text h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        .timeline {
+            margin-top: 2rem;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+        }
+
+        .timeline-item h4 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .timeline-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .aiteo-section {
+            background-color: var(--light);
+        }
+
+        .aiteo-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .aiteo-text {
+            flex: 1;
+        }
+
+        .aiteo-text h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .aiteo-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        .aiteo-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .aiteo-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .legacy {
+            background-color: white;
+        }
+
+        .legacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .legacy-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--accent);
+        }
+
+        .legacy-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .legacy-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .legacy-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .legacy-card:hover .legacy-img img {
+            transform: scale(1.1);
+        }
+
+        .legacy-content {
+            padding: 25px;
+        }
+
+        .legacy-content h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .legacy-content p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-column p {
+            margin-bottom: 1rem;
+            color: #adb5bd;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 992px) {
+            .bio-content, .aiteo-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                padding: 10px 0;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Victor I. <span>Okoronkwo</span></a>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#bio">Biography</a></li>
+                    <li><a href="#aiteo">Aiteo Group</a></li>
+                    <li><a href="#legacy">Legacy</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Victor Ikechukwu Okoronkwo</h1>
+            <p>Visionary Energy Leader & CEO of Nembe Exploration and Production, driving Africa's energy transformation.</p>
+            <a href="#bio" class="btn">Explore Legacy</a>
+        </div>
+    </section>
+
+    <section id="bio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Biography</h2>
+            </div>
+            <div class="bio-content">
+                <div class="bio-image">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Victor Ikechukwu Okoronkwo">
+                </div>
+                <div class="bio-text">
+                    <h3>A Leader in Africa's Energy Sector</h3>
+                    <p>Victor Ikechukwu Okoronkwo stands among Africa's most formidable energy executives, with a monumental 40-year career spanning seismic operations, Shell leadership, and transformative stewardship of Nigeria's largest indigenous oil producer.</p>
+                    <p>Recognized globally as a "Titan in Oil, Gas, and Power," he has pioneered Nigeria's energy transition while driving unprecedented growth in indigenous capacity.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>Current Leadership</h4>
+                            <p>Group MD/CEO of Nembe Exploration and Production Ltd (formerly Aiteo Eastern E&P).</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Shell Legacy</h4>
+                            <p>24-year tenure culminating as General Manager, Gas for Sub-Saharan Africa.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Strategic Vision</h4>
+                            <p>Orchestrated $2.5 billion acquisition of OML 29 and Nembe Creek Trunk Line.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="aiteo-section" id="aiteo">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nembe Exploration & Production</h2>
+            </div>
+            <div class="aiteo-content">
+                <div class="aiteo-text">
+                    <h3>Transforming Africa's Energy Landscape</h3>
+                    <p>Under Victor Okoronkwo's leadership as Group Managing Director and CEO, Nembe Exploration and Production has emerged as a cornerstone of Nigeria's energy security and a model for indigenous capacity in Africa's energy sector.</p>
+                    <p>The company's strategic assets include the prolific OML 29 and the critical Nembe Creek Trunk Line infrastructure, representing some of the most significant energy developments in Nigeria.</p>
+                    <p>Through visionary leadership and operational excellence, Nembe E&P demonstrates the capacity of indigenous companies to compete at the highest levels while contributing significantly to national economic development.</p>
+                </div>
+                <div class="aiteo-image">
+                    <img src="https://images.unsplash.com/photo-1565374399545-0cbab8bda6a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Energy Operations">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="legacy" id="legacy">
+        <div class="container">
+            <div class="section-title">
+                <h2>Leadership Legacy</h2>
+            </div>
+            <div class="legacy-grid">
+                <div class="legacy-card">
+                    <div class="legacy-img">
+                        <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Energy Sector Transformation">
+                    </div>
+                    <div class="legacy-content">
+                        <h3>Energy Sector Transformation</h3>
+                        <p>Pioneered the growth of indigenous participation in Nigeria's oil and gas industry, demonstrating local capacity to manage complex energy assets and operations at world-class standards.</p>
+                    </div>
+                </div>
+                <div class="legacy-card">
+                    <div class="legacy-img">
+                        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Economic Development">
+                    </div>
+                    <div class="legacy-content">
+                        <h3>Economic Development</h3>
+                        <p>Contributed significantly to Nigeria's economy through job creation, revenue generation, and development of critical energy infrastructure that supports national growth.</p>
+                    </div>
+                </div>
+                <div class="legacy-card">
+                    <div class="legacy-img">
+                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Policy Influence">
+                    </div>
+                    <div class="legacy-content">
+                        <h3>Policy Influence</h3>
+                        <p>Instrumental in shaping Nigeria's energy policy framework including the Gas Master Plan and Petroleum Industry Act, providing thought leadership across the sector.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact</h2>
+            </div>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>contact@victorokoronkwo.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Office</h3>
+                    <p>Nembe Exploration & Production<br>Lagos, Nigeria</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Website</h3>
+                    <p>www.victorokoronkwo.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Victor Ikechukwu Okoronkwo</h3>
+                    <p>A legacy of transformative leadership in Africa's energy sector and commitment to sustainable development.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <p><a href="#home" style="color: #adb5bd; text-decoration: none;">Home</a></p>
+                    <p><a href="#bio" style="color: #adb5bd; text-decoration: none;">Biography</a></p>
+                    <p><a href="#aiteo" style="color: #adb5bd; text-decoration: none;">Nembe E&P</a></p>
+                    <p><a href="#legacy" style="color: #adb5bd; text-decoration: none;">Legacy</a></p>
+                </div>
+                <div class="footer-column">
+                    <h3>Professional</h3>
+                    <p>Energy Executive</p>
+                    <p>Industry Thought Leader</p>
+                    <p>Policy Influencer</p>
+                    <p>Board Member</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Victor Ikechukwu Okoronkwo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu after clicking a link
+                if (window.innerWidth <= 768) {
+                    document.querySelector('nav ul').classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
