@@ -90,9 +90,29 @@
             margin: 0 auto;
         }
 
-        /* Contact Section */
+        /* Contact Sections */
         .contact-section {
             padding: 80px 0;
+        }
+
+        .professional-inquiries {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .professional-inquiries h2 {
+            font-size: 2.2rem;
+            color: #0A0A2A;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .professional-inquiries p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
         .contact-grid {
@@ -102,6 +122,7 @@
             margin-top: 40px;
         }
 
+        /* Contact Form */
         .contact-form {
             background: white;
             padding: 40px;
@@ -109,11 +130,12 @@
             box-shadow: 0 8px 30px rgba(10,10,42,0.1);
         }
 
-        .contact-form h2 {
+        .contact-form h3 {
             color: #0A0A2A;
-            margin-bottom: 30px;
-            font-size: 1.8rem;
-            font-weight: 600;
+            margin-bottom: 25px;
+            font-size: 1.6rem;
+            border-bottom: 2px solid #0A0A2A;
+            padding-bottom: 10px;
         }
 
         .form-group {
@@ -123,8 +145,8 @@
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            color: #0A0A2A;
             font-weight: 500;
+            color: #0A0A2A;
         }
 
         .form-group input,
@@ -132,7 +154,7 @@
         .form-group select {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid #ddd;
+            border: 2px solid #eaeaea;
             border-radius: 8px;
             font-size: 1rem;
             transition: border-color 0.3s ease;
@@ -152,7 +174,7 @@
         }
 
         .submit-btn {
-            background: #0A0A2A;
+            background: linear-gradient(135deg, #0A0A2A 0%, #1A1A4A 100%);
             color: white;
             padding: 15px 30px;
             border: none;
@@ -160,69 +182,96 @@
             font-size: 1rem;
             font-weight: 500;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: transform 0.3s ease;
             width: 100%;
         }
 
         .submit-btn:hover {
-            background: #1A1A4A;
+            transform: translateY(-2px);
         }
 
-        .contact-info {
+        /* Executive Contact Info */
+        .executive-contact {
             background: #f8f9fa;
             padding: 40px;
             border-radius: 12px;
             border-left: 4px solid #0A0A2A;
         }
 
-        .contact-info h2 {
+        .executive-contact h3 {
             color: #0A0A2A;
-            margin-bottom: 30px;
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-
-        .info-item {
             margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #eaeaea;
+            font-size: 1.6rem;
+            border-bottom: 2px solid #0A0A2A;
+            padding-bottom: 10px;
         }
 
-        .info-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
+        .contact-item {
+            margin-bottom: 25px;
+            padding-left: 30px;
+            position: relative;
         }
 
-        .info-item h3 {
+        .contact-item::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #0A0A2A;
+            font-size: 1.5rem;
+        }
+
+        .contact-item h4 {
+            color: #0A0A2A;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .contact-item p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Inquiry Types */
+        .inquiry-types {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(10,10,42,0.1);
+            margin-top: 40px;
+        }
+
+        .inquiry-types h3 {
+            color: #0A0A2A;
+            margin-bottom: 25px;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
+        .inquiry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .inquiry-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 4px solid #0A0A2A;
+        }
+
+        .inquiry-card h4 {
             color: #0A0A2A;
             margin-bottom: 10px;
             font-size: 1.2rem;
-            font-weight: 600;
         }
 
-        .info-item p {
+        .inquiry-card p {
             color: #666;
-            line-height: 1.6;
-        }
-
-        .professional-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .professional-link {
-            background: #0A0A2A;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: background 0.3s ease;
-        }
-
-        .professional-link:hover {
-            background: #1A1A4A;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         /* Footer */
@@ -254,7 +303,7 @@
             }
             
             .contact-form,
-            .contact-info {
+            .executive-contact {
                 padding: 30px;
             }
         }
@@ -273,8 +322,9 @@
                 gap: 1rem;
             }
             
-            .professional-links {
-                flex-direction: column;
+            .contact-form,
+            .executive-contact {
+                padding: 25px;
             }
         }
     </style>
@@ -298,75 +348,101 @@
     <!-- Contact Hero -->
     <section class="contact-hero">
         <div class="container">
-            <h1>Get In Touch</h1>
-            <p>For professional inquiries, speaking engagements, and media opportunities</p>
+            <h1>Executive Contact</h1>
+            <p>For professional inquiries, speaking engagements, and industry collaboration</p>
         </div>
     </section>
 
     <!-- Contact Content -->
     <section class="contact-section">
         <div class="container">
+            <!-- Professional Inquiries Header -->
+            <div class="professional-inquiries">
+                <h2>Professional Inquiries</h2>
+                <p>Victor Okoronkwo welcomes serious professional inquiries related to energy sector leadership, speaking engagements, and strategic industry collaboration. All communications are handled with discretion and professionalism.</p>
+            </div>
+
             <div class="contact-grid">
                 <!-- Contact Form -->
                 <div class="contact-form">
-                    <h2>Send a Message</h2>
+                    <h3>Send a Professional Inquiry</h3>
                     <form>
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
+                            <label for="organization">Organization</label>
+                            <input type="text" id="organization" name="organization" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Position</label>
+                            <input type="text" id="position" name="position" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Professional Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="company">Company/Organization</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        <div class="form-group">
-                            <label for="inquiry">Type of Inquiry</label>
-                            <select id="inquiry" name="inquiry">
-                                <option value="">Select an option</option>
+                            <label for="inquiry-type">Nature of Inquiry</label>
+                            <select id="inquiry-type" name="inquiry-type" required>
+                                <option value="">Select inquiry type</option>
                                 <option value="speaking">Speaking Engagement</option>
                                 <option value="media">Media Interview</option>
-                                <option value="business">Business Collaboration</option>
-                                <option value="other">Other</option>
+                                <option value="collaboration">Industry Collaboration</option>
+                                <option value="partnership">Strategic Partnership</option>
+                                <option value="other">Other Professional Matter</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Detailed Inquiry</label>
+                            <textarea id="message" name="message" placeholder="Please provide details about your professional inquiry..." required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
+                        <button type="submit" class="submit-btn">Submit Professional Inquiry</button>
                     </form>
                 </div>
 
-                <!-- Contact Information -->
-                <div class="contact-info">
-                    <h2>Professional Inquiries</h2>
-                    
-                    <div class="info-item">
-                        <h3>Speaking Engagements</h3>
-                        <p>For conference speaking, panel discussions, and industry events. Available for domestic and international energy conferences.</p>
+                <!-- Executive Contact Information -->
+                <div class="executive-contact">
+                    <h3>Executive Profile</h3>
+                    <div class="contact-item">
+                        <h4>Current Position</h4>
+                        <p>Group Managing Director & Chief Executive<br>Nembe Exploration and Production Limited</p>
                     </div>
-
-                    <div class="info-item">
-                        <h3>Media Interviews</h3>
-                        <p>Available for television, radio, and print media interviews on energy sector developments, policy, and market insights.</p>
+                    <div class="contact-item">
+                        <h4>Industry Focus</h4>
+                        <p>Energy Executive • Upstream Operations • Gas Commercialization<br>Energy Policy • African Energy Development</p>
                     </div>
-
-                    <div class="info-item">
-                        <h3>Business Collaboration</h3>
-                        <p>For strategic partnerships, joint ventures, and industry collaboration opportunities in the energy sector.</p>
+                    <div class="contact-item">
+                        <h4>Professional Background</h4>
+                        <p>40+ Years Industry Experience<br>Former Shell Executive Leadership<br>Energy Sector Transformation Leader</p>
                     </div>
+                    <div class="contact-item">
+                        <h4>Contact Protocol</h4>
+                        <p>All professional inquiries are reviewed by executive staff.<br>Response within 3-5 business days for qualified inquiries.</p>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="info-item">
-                        <h3>Professional Profiles</h3>
-                        <div class="professional-links">
-                            <a href="https://linkedin.com/in/victorokoronkwo" target="_blank" class="professional-link">LinkedIn</a>
-                            <a href="https://wpc.spglobal.com" target="_blank" class="professional-link">WPC Profile</a>
-                            <a href="https://saipec-event.com" target="_blank" class="professional-link">SAIPEC</a>
-                        </div>
+            <!-- Inquiry Types -->
+            <div class="inquiry-types">
+                <h3>Types of Professional Engagements</h3>
+                <div class="inquiry-grid">
+                    <div class="inquiry-card">
+                        <h4>Speaking Engagements</h4>
+                        <p>Keynote addresses and expert panels at international energy conferences and industry forums</p>
+                    </div>
+                    <div class="inquiry-card">
+                        <h4>Media Features</h4>
+                        <p>Interviews and expert commentary on energy sector developments and African energy markets</p>
+                    </div>
+                    <div class="inquiry-card">
+                        <h4>Industry Collaboration</h4>
+                        <p>Strategic partnerships and joint initiatives in energy development and infrastructure</p>
+                    </div>
+                    <div class="inquiry-card">
+                        <h4>Policy Engagement</h4>
+                        <p>Contributions to energy policy development and sector reform discussions</p>
                     </div>
                 </div>
             </div>
