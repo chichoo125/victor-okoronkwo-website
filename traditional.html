@@ -164,65 +164,135 @@
             display: inline-block;
         }
 
-        /* Regalia Display */
+        /* Enhanced Regalia Display with Larger Image */
         .regalia-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-bottom: 60px;
-            align-items: center;
+            gap: 60px;
+            margin-bottom: 80px;
+            align-items: start;
         }
 
         .regalia-image {
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            border: 3px solid #D4AF37;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            border: 4px solid #D4AF37;
             position: relative;
+            background: #000;
         }
 
         .regalia-image::before {
             content: '';
             position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            border: 2px solid #8B0000;
-            border-radius: 18px;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 3px solid #8B0000;
+            border-radius: 25px;
             z-index: -1;
-            opacity: 0.3;
+            opacity: 0.4;
         }
 
         .regalia-image img {
             width: 100%;
-            height: 500px;
+            height: 650px; /* Much larger height */
             object-fit: cover;
             display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .regalia-image:hover img {
+            transform: scale(1.02);
         }
 
         .regalia-info {
             background: white;
-            padding: 40px;
-            border-radius: 12px;
+            padding: 50px 40px;
+            border-radius: 15px;
             border: 1px solid #eaeaea;
-            box-shadow: 0 8px 30px rgba(10,10,42,0.08);
-            border-left: 4px solid #8B0000;
+            box-shadow: 0 15px 40px rgba(10,10,42,0.1);
+            border-left: 5px solid #8B0000;
+            border-right: 2px solid #D4AF37;
         }
 
         .regalia-info h2 {
             color: #0A0A2A;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-size: 2rem;
             font-weight: 500;
-            border-bottom: 2px solid #D4AF37;
-            padding-bottom: 10px;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 15px;
+            text-align: center;
         }
 
         .regalia-info p {
             color: #666;
-            margin-bottom: 15px;
-            line-height: 1.6;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        /* Large Prominent Logo in Body */
+        .prominent-logo-section {
+            background: linear-gradient(135deg, #0A0A2A 0%, #1A1A4A 100%);
+            padding: 80px 0;
+            text-align: center;
+            margin: 60px 0;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .prominent-logo-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(139, 0, 0, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .prominent-logo-container {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .prominent-logo {
+            height: 180px; /* Much larger than navigation logo */
+            width: 180px;
+            border-radius: 20px;
+            border: 4px solid #D4AF37;
+            padding: 10px;
+            background: white;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .prominent-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .prominent-logo-text {
+            color: white;
+            margin-top: 20px;
+        }
+
+        .prominent-logo-text h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #D4AF37;
+        }
+
+        .prominent-logo-text p {
+            font-size: 1.3rem;
+            opacity: 0.9;
         }
 
         /* Royal Honors Grid */
@@ -236,12 +306,12 @@
         .royal-honor-card {
             background: white;
             padding: 40px 30px;
-            border-radius: 10px;
+            border-radius: 15px;
             border: 1px solid #eaeaea;
-            box-shadow: 0 5px 20px rgba(10,10,42,0.05);
+            box-shadow: 0 10px 30px rgba(10,10,42,0.08);
             transition: transform 0.3s ease;
             text-align: center;
-            border-top: 4px solid #8B0000;
+            border-top: 5px solid #8B0000;
             position: relative;
         }
 
@@ -251,41 +321,42 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 5px;
             background: linear-gradient(90deg, #8B0000, #D4AF37);
         }
 
         .royal-honor-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(139, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(139, 0, 0, 0.15);
         }
 
         .royal-honor-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 3.5rem;
+            margin-bottom: 25px;
             color: #8B0000;
         }
 
         .royal-honor-card h3 {
             color: #0A0A2A;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
             font-weight: 600;
         }
 
         .royal-honor-card p {
             color: #666;
-            line-height: 1.5;
+            line-height: 1.6;
+            font-size: 1.1rem;
         }
 
         /* Cultural Significance */
         .cultural-section {
             background: linear-gradient(135deg, #0A0A2A 0%, #1A1A4A 100%);
             color: white;
-            padding: 60px 0;
+            padding: 70px 0;
             text-align: center;
-            border-radius: 15px;
-            margin: 50px 0;
+            border-radius: 20px;
+            margin: 60px 0;
             position: relative;
             overflow: hidden;
         }
@@ -298,23 +369,23 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 70%, rgba(139, 0, 0, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(139, 0, 0, 0.15) 0%, transparent 50%);
             pointer-events: none;
         }
 
         .cultural-section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 25px;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
             color: #D4AF37;
             position: relative;
         }
 
         .cultural-section p {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.7;
+            font-size: 1.2rem;
+            line-height: 1.8;
             position: relative;
         }
 
@@ -322,23 +393,25 @@
         .traditional-address {
             background: linear-gradient(135deg, #8B0000, #600000);
             color: white;
-            padding: 30px;
-            border-radius: 10px;
+            padding: 35px;
+            border-radius: 15px;
             text-align: center;
-            margin-top: 30px;
-            border: 2px solid #D4AF37;
+            margin-top: 40px;
+            border: 3px solid #D4AF37;
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.3);
         }
 
         .traditional-address h3 {
             color: #D4AF37;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
         }
 
         .traditional-address p {
             color: white;
             margin-bottom: 0;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            font-weight: 500;
         }
 
         /* Footer - Matching existing style */
@@ -358,7 +431,16 @@
         @media (max-width: 768px) {
             .regalia-container {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 40px;
+            }
+            
+            .regalia-image img {
+                height: 500px;
+            }
+            
+            .prominent-logo {
+                height: 150px;
+                width: 150px;
             }
             
             .traditional-hero h1 {
@@ -383,7 +465,7 @@
             }
             
             .regalia-info {
-                padding: 25px;
+                padding: 30px 25px;
             }
             
             .royal-honors-grid {
@@ -398,6 +480,15 @@
             
             .traditional-hero h1 {
                 font-size: 2rem;
+            }
+            
+            .regalia-image img {
+                height: 400px;
+            }
+            
+            .prominent-logo {
+                height: 120px;
+                width: 120px;
             }
             
             .nav-container {
@@ -433,7 +524,7 @@
         </div>
     </header>
 
-    <!-- Regalia Display -->
+    <!-- Regalia Display with Larger Image -->
     <section class="section">
         <div class="container">
             <div class="regalia-container">
@@ -448,10 +539,24 @@
                     
                     <div class="traditional-address">
                         <h3>Traditional Address</h3>
-                        <p>Ugwu Aro Victor Ikechukwu Okoronkwo</p>
+                        <p>Mazi Victor Ikechukwu Okoronkwo (Ugwu Aro)</p>
                         <p>Arochukwu Kingdom, Abia State, Nigeria</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prominent Logo Section -->
+    <section class="prominent-logo-section">
+        <div class="container">
+            <div class="prominent-logo-container">
+                <img src="Logo.jpg" alt="Ugwu Aro - Victor Okoronkwo" class="prominent-logo">
+            </div>
+            <div class="prominent-logo-text">
+                <h3>UGWU ARO</h3>
+                <p>Victor Ikechukwu Okoronkwo</p>
+                <p>Traditional Leader & Cultural Ambassador</p>
             </div>
         </div>
     </section>
@@ -486,7 +591,7 @@
             <div class="cultural-section">
                 <h2>Cultural Significance</h2>
                 <p>The Arochukwu Kingdom, with its rich history and cultural heritage, represents one of the most significant traditional institutions in Eastern Nigeria. The Ugwu Aro title embodies the kingdom's values of wisdom, leadership, and community service.</p>
-                <p style="margin-top: 20px;">This honor reflects a deep commitment to preserving cultural identity while contributing to modern societal development and progress.</p>
+                <p style="margin-top: 25px;">This honor reflects a deep commitment to preserving cultural identity while contributing to modern societal development and progress.</p>
             </div>
         </div>
     </section>
