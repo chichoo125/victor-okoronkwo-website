@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Victor Okoronkwo</title>
+    <!-- Favicon -->
+    <link rel="icon" href="Logo.jpg" type="image/jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: #0A0A2A;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-image {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-menu a:hover {
+            color: #4A4A8A;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Gallery Hero */
+        .gallery-hero {
+            background: linear-gradient(135deg, #0A0A2A 0%, #1A1A4A 100%);
+            color: white;
+            padding: 150px 0 80px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .gallery-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .gallery-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Gallery Sections */
+        .gallery-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #0A0A2A;
+            font-weight: 300;
+        }
+
+        .gallery-category {
+            margin-bottom: 80px;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            color: #0A0A2A;
+            margin-bottom: 40px;
+            text-align: center;
+            border-bottom: 3px solid #0A0A2A;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+
+        /* Professional Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(10,10,42,0.1);
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(10,10,42,0.15);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+
+        .gallery-placeholder {
+            text-align: center;
+            color: #666;
+            padding: 40px 20px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(10,10,42,0.95));
+            color: white;
+            padding: 25px 20px 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        .gallery-caption h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .gallery-caption p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        /* Footer */
+        footer {
+            background: #0A0A2A;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 10px 0;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .nav-menu {
+                gap: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .category-title {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-hero {
+                padding: 120px 0 60px;
+            }
+            
+            .gallery-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="Logo.jpg" alt="Victor Okoronkwo" class="logo-image">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">EXECUTIVE PROFILE</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="media.html">MEDIA</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Professional Gallery</h1>
+            <p>Capturing key moments from industry leadership, speaking engagements, and professional milestones</p>
+        </div>
+    </section>
+
+    <!-- Gallery Content -->
+    <section class="gallery-section">
+        <div class="container">
+            <!-- Industry Leadership -->
+            <div class="gallery-category">
+                <h2 class="category-title">Industry Leadership & Conferences</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            [World Petroleum Congress]<br>
+                            Upload: gallery/world-petroleum-congress.jpg
+                        </div>
+                        <div class="gallery-caption">
+                            <h3>World Petroleum Congress</h3>
+                            <p>S&P Global "Titan" Recognition & Speaker Session</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            [Mozambique Gas Summit]<br>
+                            Upload: gallery/mozambique-gas-summit.jpg
+                        </div>
+                        <div class="gallery-caption">
+                            <h3>Mozambique Gas & Energy Summit</h3>
+                            <p>Keynote Address 2024 | African Energy Development</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            [SAIPEC Conference]<br>
+                            Upload: gallery/saipec-conference.jpg
+                        </div>
+                        <div class="gallery-caption">
+                            <h3>SAIPEC Energy Conference</h3>
+                            <p>Featured Speaker | Industry Panel Discussion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corporate Milestones -->
+            <div class="gallery-category">
+                <h2 class="category-title">Corporate Milestones</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            [Nembe E&P Launch]<br>
+                            Upload: gallery/nembe-launch.jpg
+                        </div>
+                        <div class="gallery-caption">
+                            <h3>Nembe E&P Rebrand Launch</h3>
+                            <p>2025 Strategic Transformation & Company Vision</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            [Leadership Event]<br>
+                            Upload: gallery/leadership-event.jpg
+                        </div>
+                        <div class="gallery-caption">
+                            <h3>Executive Leadership Summit</h3>
+                            <p>Strategic Planning & Industry Collaboration</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            [Award Ceremony]<br>
+                            Upload: gallery/award-ceremony.jpg
+                        </div>
+                        <div class="gallery-caption">
+                            <h3>Industry Recognition</h3>
+                            <p>Energy Leadership Awards & Professional Honors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Media & Public Engagement -->
+            <div class="gallery-category">
+                <h2 class="category-title">Media & Public Engagement</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            [TV Interview]<br>
+                            Upload: gallery/tv-interview.jpg
+                        </div>
+                        <div class="gallery-caption">
+                            <h3>Television Feature</h3>
+                            <p>Energy Sector Insights & Market Analysis</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            [Press Conference]<br>
+                            Upload: gallery/press-conference.jpg
+                        </div>
+                        <div class="gallery-caption">
+                            <h3>Media Briefing</h3>
+                            <p>Industry Announcements & Strategic Updates</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            [Public Forum]<br>
+                            Upload: gallery/public-forum.jpg
+                        </div>
+                        <div class="gallery-caption">
+                            <h3>Energy Policy Forum</h3>
+                            <p>Public Address & Stakeholder Engagement</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Victor Ikechukwu Okoronkwo | Energy Executive & Industry Leader</p>
+            <p>Group Managing Director & CEO | Nembe Exploration and Production Limited</p>
+        </div>
+    </footer>
+</body>
+</html>
