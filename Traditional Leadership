@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UGWU ARO - Traditional Leadership | Mazi Victor Ikechukwu Okoronkwo</title>
+    <title>Traditional Leadership - Victor Okoronkwo</title>
     <!-- Favicon -->
     <link rel="icon" href="Logo.jpg" type="image/jpg">
     <style>
@@ -14,29 +14,27 @@
         }
 
         body {
-            font-family: 'Georgia', 'Times New Roman', serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #2C1810;
-            background: #FAF5F0;
-            overflow-x: hidden;
+            color: #333;
+            background: #ffffff;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* POWERFUL NAVIGATION - ROYAL STYLING */
+        /* Enhanced Navigation for Traditional Page */
         .navbar {
-            background: linear-gradient(135deg, #8B0000 0%, #600000 50%, #8B0000 100%);
-            padding: 1.2rem 0;
+            background: linear-gradient(135deg, #8B0000 0%, #B22222 100%);
+            padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 8px 30px rgba(139, 0, 0, 0.5);
-            border-bottom: 4px solid #D4AF37;
+            box-shadow: 0 4px 20px rgba(139, 0, 0, 0.3);
         }
 
         .nav-container {
@@ -45,490 +43,326 @@
             align-items: center;
         }
 
-        /* ROYAL LOGO - COMMANDING PRESENCE */
-        .royal-logo {
+        /* EXCEPTIONAL LOGO DESIGN */
+        .logo-enhanced {
             display: flex;
             align-items: center;
-            gap: 20px;
-            padding: 15px 25px;
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(255, 215, 0, 0.1));
-            border-radius: 20px;
-            border: 3px solid #D4AF37;
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .royal-logo::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
-            animation: royalGlow 3s ease-in-out infinite;
-        }
-
-        @keyframes royalGlow {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-        }
-
-        .logo-image-royal {
-            height: 80px;
-            width: 80px;
+            gap: 15px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            border: 3px solid #D4AF37;
-            padding: 5px;
-            background: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            z-index: 2;
+            border: 2px solid gold;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
         }
 
-        .royal-text {
+        .logo-image-enhanced {
+            height: 70px;
+            width: auto;
+            border-radius: 10px;
+            border: 2px solid gold;
+            padding: 3px;
+            background: white;
+        }
+
+        .logo-text {
             color: white;
             text-align: center;
-            z-index: 2;
         }
 
-        .royal-text-main {
-            font-size: 1.6rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
-            text-transform: uppercase;
-        }
-
-        .royal-text-sub {
-            font-size: 1.1rem;
-            opacity: 0.95;
-            font-style: italic;
+        .logo-text-main {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            color: #D4AF37;
-            margin-top: 5px;
         }
 
-        .royal-text-honor {
+        .logo-text-sub {
             font-size: 0.9rem;
-            color: #FFD700;
-            margin-top: 3px;
-            font-weight: 600;
+            opacity: 0.9;
+            font-style: italic;
         }
 
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         .nav-menu a {
             color: white;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.4s ease;
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            border: 2px solid rgba(212, 175, 55, 0.3);
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(139, 0, 0, 0.3));
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .nav-menu a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .nav-menu a:hover::before {
-            left: 100%;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .nav-menu a:hover {
-            color: #FFD700;
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(139, 0, 0, 0.4));
-            border-color: #FFD700;
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+            color: gold;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
         }
 
-        /* GRAND HERO SECTION - ROYAL WELCOME */
-        .royal-hero {
-            background: linear-gradient(135deg, #8B0000 0%, #600000 30%, #2C1810 100%);
+        /* Traditional Hero Section */
+        .traditional-hero {
+            background: linear-gradient(135deg, #8B0000 0%, #B22222 50%, #8B4513 100%);
             color: white;
-            padding: 220px 0 150px;
-            margin-top: 100px;
+            padding: 180px 0 100px;
+            margin-top: 80px;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .royal-hero::before {
+        .traditional-hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.03"><path fill="%23D4AF37" d="M50 10L60 40H90L65 60L75 90L50 70L25 90L35 60L10 40H40Z"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><path fill="gold" d="M50 10L60 40H90L65 60L75 90L50 70L25 90L35 60L10 40H40Z"/></svg>');
             background-size: 200px;
             pointer-events: none;
         }
 
-        .royal-hero h1 {
-            font-size: 4.5rem;
+        .traditional-hero h1 {
+            font-size: 4rem;
             margin-bottom: 20px;
             font-weight: 300;
-            text-shadow: 4px 4px 8px rgba(0,0,0,0.8);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
             position: relative;
-            letter-spacing: 3px;
         }
 
-        .royal-hero .royal-subtitle {
+        .traditional-hero .title {
             font-size: 2rem;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             opacity: 0.9;
             font-weight: 300;
-            color: #D4AF37;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
-            letter-spacing: 2px;
+            color: gold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
-        .royal-hero .traditional-name {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
+        .traditional-hero .traditional-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
             font-weight: 600;
-            color: #FFFFFF;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
-        }
-
-        .royal-hero .royal-title {
-            font-size: 3.5rem;
-            margin-bottom: 40px;
-            font-weight: 800;
-            color: #FFD700;
-            text-shadow: 4px 4px 8px rgba(0,0,0,0.8);
-            border: 4px solid #D4AF37;
-            padding: 25px 50px;
+            color: gold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            border: 2px solid gold;
+            padding: 15px 30px;
             display: inline-block;
-            border-radius: 20px;
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.3), rgba(212, 175, 55, 0.2));
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.3);
         }
 
-        .royal-hero .royal-title::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,215,0,0.1), transparent);
-            animation: titleShine 3s ease-in-out infinite;
+        /* Traditional Content */
+        .traditional-section {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
         }
 
-        @keyframes titleShine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-
-        /* ROYAL CONTENT SECTIONS */
-        .royal-section {
-            padding: 120px 0;
-            background: linear-gradient(to bottom, #FAF5F0, #F0E6D6);
-            position: relative;
-        }
-
-        .royal-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #8B0000, #D4AF37, #8B0000);
-        }
-
-        .section-title-royal {
+        .section-title-traditional {
             text-align: center;
-            font-size: 3.5rem;
-            margin-bottom: 80px;
+            font-size: 3rem;
+            margin-bottom: 60px;
             color: #8B0000;
             font-weight: 300;
             position: relative;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
-        .section-title-royal::after {
+        .section-title-traditional::after {
             content: '';
             position: absolute;
-            bottom: -20px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 200px;
-            height: 4px;
-            background: linear-gradient(90deg, #8B0000, #D4AF37, #8B0000);
-            border-radius: 2px;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #8B0000, gold, #8B0000);
         }
 
-        /* GRAND REGALIA DISPLAY */
-        .regalia-display-grand {
+        /* Traditional Regalia Display */
+        .regalia-display {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            margin-bottom: 100px;
+            gap: 60px;
+            margin-bottom: 80px;
             align-items: center;
         }
 
-        .regalia-image-grand {
+        .regalia-image-container {
             position: relative;
-            border-radius: 30px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 30px 60px rgba(139, 0, 0, 0.4);
-            border: 8px solid #D4AF37;
-            transform: perspective(1000px) rotateY(-5deg);
-            transition: transform 0.5s ease;
-        }
-
-        .regalia-image-grand:hover {
-            transform: perspective(1000px) rotateY(0deg) scale(1.02);
-        }
-
-        .regalia-image-grand::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            border: 2px solid #8B0000;
-            border-radius: 35px;
-            z-index: -1;
-            background: linear-gradient(45deg, #8B0000, #D4AF37, #8B0000);
-            opacity: 0.3;
+            box-shadow: 0 20px 40px rgba(139, 0, 0, 0.3);
+            border: 5px solid gold;
         }
 
         .regalia-image {
             width: 100%;
-            height: 700px;
+            height: 600px;
             object-fit: cover;
             display: block;
         }
 
-        .regalia-info-grand {
+        .regalia-info {
             background: white;
-            padding: 50px 40px;
-            border-radius: 25px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            border-left: 8px solid #8B0000;
-            border-right: 2px solid #D4AF37;
-            position: relative;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-left: 5px solid #8B0000;
         }
 
-        .regalia-info-grand::before {
-            content: '👑';
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 3rem;
-            background: white;
-            padding: 0 20px;
-        }
-
-        .regalia-info-grand h2 {
+        .regalia-info h2 {
             color: #8B0000;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-            font-weight: 600;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .regalia-info-grand p {
-            color: #5D4037;
-            line-height: 1.8;
             margin-bottom: 25px;
-            font-size: 1.2rem;
-            text-align: justify;
+            font-size: 2.2rem;
+            font-weight: 600;
         }
 
-        .traditional-address {
-            background: linear-gradient(135deg, #8B0000, #600000);
-            color: white;
-            padding: 30px;
+        .regalia-info p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Honors Grid */
+        .honors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .honor-card {
+            background: white;
+            padding: 40px 30px;
             border-radius: 15px;
             text-align: center;
-            margin-top: 30px;
-            border: 2px solid #D4AF37;
-        }
-
-        .traditional-address h3 {
-            color: #FFD700;
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-        }
-
-        .traditional-address p {
-            color: white;
-            font-size: 1.1rem;
-            margin-bottom: 0;
-        }
-
-        /* ROYAL HONORS GRID */
-        .royal-honors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .royal-honor-card {
-            background: linear-gradient(135deg, white, #F9F5F0);
-            padding: 50px 30px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            transition: all 0.4s ease;
-            border-top: 6px solid #8B0000;
-            border-bottom: 3px solid #D4AF37;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #8B0000;
             position: relative;
             overflow: hidden;
         }
 
-        .royal-honor-card::before {
+        .honor-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, #8B0000, #D4AF37, #8B0000);
+            height: 4px;
+            background: linear-gradient(90deg, #8B0000, gold, #8B0000);
         }
 
-        .royal-honor-card:hover {
-            transform: translateY(-15px) scale(1.03);
-            box-shadow: 0 25px 50px rgba(139, 0, 0, 0.3);
+        .honor-card:hover {
+            transform: translateY(-10px);
         }
 
-        .royal-honor-icon {
-            font-size: 4rem;
-            margin-bottom: 25px;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
-        }
-
-        .royal-honor-card h3 {
+        .honor-icon {
+            font-size: 3rem;
             color: #8B0000;
             margin-bottom: 20px;
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
-        .royal-honor-card p {
-            color: #5D4037;
-            line-height: 1.7;
-            font-size: 1.1rem;
+        .honor-card h3 {
+            color: #8B0000;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: 600;
         }
 
-        /* ROYAL FOOTER */
-        .royal-footer {
-            background: linear-gradient(135deg, #2C1810 0%, #8B0000 50%, #2C1810 100%);
+        .honor-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Cultural Significance */
+        .cultural-significance {
+            background: linear-gradient(135deg, #8B0000 0%, #B22222 100%);
             color: white;
             padding: 80px 0;
+            margin: 80px 0;
+            border-radius: 20px;
             text-align: center;
-            border-top: 6px solid #D4AF37;
-            position: relative;
         }
 
-        .royal-footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        .cultural-significance h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: gold;
         }
 
-        .royal-footer-title {
-            color: #FFD700;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .royal-footer p {
-            margin: 15px 0;
+        .cultural-significance p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
             opacity: 0.9;
-            font-size: 1.1rem;
         }
 
-        .royal-footer-honor {
-            color: #D4AF37;
-            font-size: 1.3rem;
+        /* Footer for Traditional Page */
+        .traditional-footer {
+            background: linear-gradient(135deg, #2d1b0f 0%, #8B0000 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-top: 5px solid gold;
+        }
+
+        .traditional-footer p {
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+
+        .footer-title {
+            color: gold;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
             font-weight: 600;
-            margin-top: 10px;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .royal-hero h1 {
-                font-size: 3rem;
-            }
-            
-            .royal-hero .royal-title {
+            .traditional-hero h1 {
                 font-size: 2.5rem;
-                padding: 20px 30px;
             }
             
-            .royal-hero .traditional-name {
-                font-size: 2rem;
-            }
-            
-            .regalia-display-grand {
+            .regalia-display {
                 grid-template-columns: 1fr;
-                gap: 50px;
+                gap: 40px;
             }
             
             .nav-menu {
                 gap: 1rem;
             }
             
-            .royal-logo {
-                padding: 10px 15px;
+            .logo-enhanced {
+                padding: 8px 15px;
             }
             
-            .logo-image-royal {
-                height: 60px;
-                width: 60px;
+            .logo-image-enhanced {
+                height: 50px;
             }
             
-            .royal-text-main {
-                font-size: 1.3rem;
+            .logo-text-main {
+                font-size: 1.1rem;
             }
         }
 
         @media (max-width: 480px) {
-            .royal-hero {
-                padding: 180px 0 100px;
+            .traditional-hero {
+                padding: 150px 0 60px;
             }
             
-            .royal-hero h1 {
-                font-size: 2.2rem;
+            .traditional-hero h1 {
+                font-size: 2rem;
             }
             
             .nav-container {
@@ -536,19 +370,100 @@
                 gap: 1rem;
             }
             
-            .regalia-info-grand {
-                padding: 30px 20px;
+            .regalia-info {
+                padding: 25px;
             }
             
-            .royal-honors-grid {
+            .honors-grid {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- POWERFUL ROYAL NAVIGATION -->
+    <!-- Enhanced Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <div class="royal-logo">
-                <img src="Logo.jpg" alt="MAZI VICTOR IKE
+            <div class="logo-enhanced">
+                <img src="Logo.jpg" alt="Victor Okoronkwo - Ugwu Aro" class="logo-image-enhanced">
+                <div class="logo-text">
+                    <div class="logo-text-main">VICTOR OKORONKWO</div>
+                    <div class="logo-text-sub">Ugwu Aro of Arochukwu</div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">EXECUTIVE PROFILE</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="media.html">MEDIA</a></li>
+                <li><a href="traditional.html">TRADITIONAL LEADERSHIP</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Traditional Hero -->
+    <section class="traditional-hero">
+        <div class="container">
+            <h1>Traditional Leadership</h1>
+            <div class="title">Honoring Cultural Heritage</div>
+            <div class="traditional-title">UGWU ARO OF AROCHUKWU KINGDOM</div>
+        </div>
+    </section>
+
+    <!-- Traditional Content -->
+    <section class="traditional-section">
+        <div class="container">
+            <!-- Regalia Display -->
+            <div class="regalia-display">
+                <div class="regalia-image-container">
+                    <div class="regalia-placeholder" style="width: 100%; height: 600px; background: linear-gradient(45deg, #8B0000, #B22222); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                        [Upload Full Traditional Regalia Photo Here]<br>
+                        Suggested: traditional-regalia.jpg
+                    </div>
+                </div>
+                <div class="regalia-info">
+                    <h2>The Ugwu Aro Title</h2>
+                    <p>The prestigious title of "Ugwu Aro" is one of the highest traditional honors in the Arochukwu Kingdom, recognizing exceptional leadership, community service, and cultural preservation.</p>
+                    <p>This honor is bestowed upon individuals who have demonstrated outstanding contributions to the development and preservation of Arochukwu heritage and values.</p>
+                    <p>As Ugwu Aro, Victor Ikechukwu Okoronkwo carries the responsibility of upholding the rich cultural traditions while bridging traditional leadership with modern governance.</p>
+                </div>
+            </div>
+
+            <!-- Honors and Recognitions -->
+            <h2 class="section-title-traditional">Honors & Recognitions</h2>
+            <div class="honors-grid">
+                <div class="honor-card">
+                    <div class="honor-icon">👑</div>
+                    <h3>Ugwu Aro Title</h3>
+                    <p>Highest traditional honor in Arochukwu Kingdom, recognizing leadership and cultural preservation.</p>
+                </div>
+                <div class="honor-card">
+                    <div class="honor-icon">⚜️</div>
+                    <h3>Knight of St. Christopher</h3>
+                    <p>Anglican Communion knighthood recognizing Christian leadership and service to the church.</p>
+                </div>
+                <div class="honor-card">
+                    <div class="honor-icon">🏆</div>
+                    <h3>Community Leadership</h3>
+                    <p>Recognized for transformative contributions to community development and youth empowerment.</p>
+                </div>
+            </div>
+
+            <!-- Cultural Significance -->
+            <div class="cultural-significance">
+                <h2>Cultural Significance</h2>
+                <p>The Arochukwu Kingdom, with its rich history and cultural heritage, represents one of the most significant traditional institutions in Eastern Nigeria. The Ugwu Aro title embodies the kingdom's values of wisdom, leadership, and community service.</p>
+                <p>This honor reflects a deep commitment to preserving cultural identity while contributing to modern societal development.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="traditional-footer">
+        <div class="container">
+            <div class="footer-title">Victor Ikechukwu Okoronkwo | Ugwu Aro of Arochukwu</div>
+            <p>Traditional Leader | Cultural Ambassador | Community Pillar</p>
+            <p>Honoring Heritage, Building Future</p>
+        </div>
+    </footer>
+</body>
+</html>
