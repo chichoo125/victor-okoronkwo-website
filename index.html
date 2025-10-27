@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Ikechukwu Okoronkwo - Energy Executive | Nembe E&P</title>
+    <title>Victor Ikechukwu Okoronkwo - Energy Executive</title>
     <style>
         * {
             margin: 0;
@@ -16,7 +16,6 @@
             line-height: 1.6;
             color: #333;
             background: #ffffff;
-            padding-top: 80px; /* Space for fixed header */
         }
 
         .container {
@@ -25,189 +24,77 @@
             padding: 0 20px;
         }
 
-        /* Professional Header */
-        .header {
+        /* Navigation */
+        .navbar {
             background: #0A0A2A;
-            padding: 15px 0;
+            padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-            border-bottom: 1px solid #1A1A4A;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .header-content {
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-image {
-            height: 45px;
-            width: auto;
-        }
-
-        .logo-text {
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: 300;
         }
 
-        .navigation {
+        .nav-menu {
             display: flex;
-            gap: 35px;
+            list-style: none;
+            gap: 2rem;
         }
 
-        .nav-link {
+        .nav-menu a {
             color: white;
             text-decoration: none;
-            font-weight: 400;
-            font-size: 0.95rem;
+            font-weight: 500;
             transition: color 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
         }
 
-        .nav-link:hover, .nav-link.active {
+        .nav-menu a:hover {
             color: #4A4A8A;
+            background: rgba(255,255,255,0.1);
         }
 
-        /* Header & Hero Section */
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #0A0A2A 0%, #1A1A4A 100%);
             color: white;
-            padding: 80px 0 60px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.03"><polygon fill="white" points="0,1000 1000,0 1000,1000"/></svg>');
-            pointer-events: none;
-        }
-
-        .hero-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 80px;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 2;
-        }
-
-        .headshot-container {
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            border: 8px solid rgba(255,255,255,0.1);
-            overflow: hidden;
-            background: #000;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            position: relative;
-        }
-
-        .headshot-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .headshot-container::after {
-            content: '';
-            position: absolute;
-            top: -4px;
-            left: -4px;
-            right: -4px;
-            bottom: -4px;
-            border: 2px solid rgba(255,255,255,0.2);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .hero-text {
-            flex: 1;
-            min-width: 400px;
-            text-align: left;
+            padding: 150px 0 100px;
+            text-align: center;
+            margin-top: 60px;
         }
 
         .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 15px;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
             font-weight: 300;
-            letter-spacing: -0.5px;
-            color: #ffffff;
         }
 
         .hero .title {
-            font-size: 1.3rem;
-            margin-bottom: 25px;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
             opacity: 0.9;
-            font-weight: 300;
-            color: #e0e0e0;
         }
 
-        .tagline {
+        .hero .company {
             font-size: 1.2rem;
-            font-style: italic;
             opacity: 0.8;
-            border-left: 4px solid #4A4A8A;
-            padding-left: 20px;
-            color: #f0f0f0;
-            line-height: 1.5;
             margin-bottom: 30px;
         }
 
-        .executive-summary {
-            background: rgba(255,255,255,0.1);
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 4px solid #4A4A8A;
-            margin-top: 20px;
-        }
-
-        /* Quick Facts */
-        .quick-facts {
-            background: #ffffff;
-            padding: 60px 0;
-            border-bottom: 1px solid #eaeaea;
-        }
-
-        .facts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .fact-card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            border-left: 4px solid #0A0A2A;
-        }
-
-        .fact-card h3 {
-            color: #0A0A2A;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        /* Key Sections */
+        /* Content Sections */
         .section {
             padding: 80px 0;
         }
@@ -243,6 +130,34 @@
             padding-bottom: 10px;
         }
 
+        /* Quick Facts */
+        .quick-facts {
+            background: #ffffff;
+            padding: 60px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .fact-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #0A0A2A;
+        }
+
+        .fact-card h3 {
+            color: #0A0A2A;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Timeline */
         .timeline-item {
             margin: 30px 0;
             padding-left: 30px;
@@ -302,7 +217,7 @@
             margin: 10px 0;
         }
 
-        /* Enhanced Speaking Engagements */
+        /* Speaking Engagements */
         .speaking-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -318,15 +233,12 @@
             text-align: center;
             text-decoration: none;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: block;
         }
 
         .speaking-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(10,10,42,0.2);
             cursor: pointer;
-            text-decoration: none;
-            color: white;
         }
 
         /* Footer */
@@ -344,24 +256,20 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 50px;
-            }
-            
-            .hero-text {
-                text-align: center;
-                min-width: auto;
+            .hero {
+                padding: 120px 0 60px;
             }
             
             .hero h1 {
                 font-size: 2.5rem;
             }
             
-            .headshot-container {
-                width: 280px;
-                height: 280px;
+            .nav-menu {
+                gap: 1rem;
+            }
+            
+            .nav-menu a {
+                padding: 0.5rem;
             }
             
             .section-title {
@@ -371,21 +279,9 @@
             .content-card {
                 padding: 25px;
             }
-
-            .navigation {
-                gap: 20px;
-            }
-
-            .nav-link {
-                font-size: 0.85rem;
-            }
         }
 
         @media (max-width: 480px) {
-            .hero {
-                padding: 60px 0 40px;
-            }
-            
             .hero h1 {
                 font-size: 2rem;
             }
@@ -393,56 +289,34 @@
             .facts-grid, .projects-grid, .speaking-grid {
                 grid-template-columns: 1fr;
             }
-
-            .header-content {
+            
+            .nav-container {
                 flex-direction: column;
-                gap: 15px;
-            }
-
-            .navigation {
-                gap: 15px;
+                gap: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Professional Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="Logo.jpg" alt="Nembe E&P Logo" class="logo-image">
-                    <div class="logo-text">Victor Ikechukwu Okoronkwo </div>
-                </div>
-                <nav class="navigation">
-                    <a href="index.html" class="nav-link active">Executive Profile</a>
-                    <a href="gallery.html" class="nav-link">Gallery</a>
-                    <a href="videos.html" class="nav-link">Media</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </nav>
-            </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">Victor Okoronkwo</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">EXECUTIVE PROFILE</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="media.html">MEDIA</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
     <header class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="headshot-container">
-                    <img src="Headshot.jpg" alt="Victor Ikechukwu Okoronkwo" class="headshot-image">
-                </div>
-                <div class="hero-text">
-                    <h1>Victor Ikechukwu Okoronkwo</h1>
-                    <div class="title">Group Managing Director & Chief Executive</div>
-                    <div class="title">Nembe Exploration and Production Limited</div>
-                    <div class="tagline">
-                        "A Titan in Oil, Gas, and Power with over three decades of strategic leadership spanning global giants and independents"
-                    </div>
-                    <div class="executive-summary">
-                        <p>Nigerian oil, gas, and energy executive with over 40 years of industry experience, recognized for upstream operations leadership, gas commercialization, power development, policy and fiscal reform advocacy, and public engagement on energy transition, security, and local content.</p>
-                    </div>
-                </div>
-            </div>
+            <h1>Victor Ikechukwu Okoronkwo</h1>
+            <div class="title">Group Managing Director & Chief Executive</div>
+            <div class="company">Nembe Exploration and Production</div>
         </div>
     </header>
 
@@ -530,10 +404,6 @@
                     <p class="project-value">~$3 Billion</p>
                     <p>Portfolio commercialization in Sub-Saharan Africa gas leadership context.</p>
                 </div>
-                <div class="project-card">
-                    <h4>Syndicated Financing</h4>
-                    <p>Restructuring of multi-billion-dollar facilities and interim agreements during oil price shocks.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -551,15 +421,10 @@
                 <p>• Two-term Chair of OPTS Gas Sub-Committee</p>
                 <p>• First National Vice President of Nigeria Gas Association</p>
             </div>
-            <div class="content-card">
-                <h3>Thought Leadership</h3>
-                <p>"Fossil fuels will remain material in the global energy mix while renewables scale up... Nigeria's gas sector can serve both export and domestic markets."</p>
-                <p>Emphasis on digitization, big data, and finance & risk disciplines as central to operator competitiveness. Consistent advocacy against oil theft and vandalism impacts on sector economics.</p>
-            </div>
         </div>
     </section>
 
-    <!-- Speaking Engagements with LINKS -->
+    <!-- Speaking Engagements -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">Speaking Engagements & Recognition</h2>
@@ -567,45 +432,27 @@
                 <a href="https://wpc.spglobal.com/en/speakers/victor-ikechukwu--okoronkwo" target="_blank" class="speaking-item">
                     World Petroleum Congress<br>(S&P Global "Titan")
                 </a>
-                <a href="https://www.uschamber.com/event/2020-nigeria-digital-economy-conference" target="_blank" class="speaking-item">
+                <a href="#" target="_blank" class="speaking-item">
                     US Chamber of Commerce<br>Digital Economy Conference
                 </a>
-                <a href="https://saipec.com/speakers" target="_blank" class="speaking-item">
+                <a href="#" target="_blank" class="speaking-item">
                     SAIPEC<br>Multiple Speaker (2019-2025)
                 </a>
-                <a href="https://mec.com.mz" target="_blank" class="speaking-item">
+                <a href="#" target="_blank" class="speaking-item">
                     Mozambique Gas & Energy Summit<br>Keynote Speaker
                 </a>
-                <a href="https://www.argusmedia.com/en/conferences-events/2023/european-crude-oil-conference" target="_blank" class="speaking-item">
+                <a href="#" target="_blank" class="speaking-item">
                     Argus European Crude Conference<br>Nembe Grade Launch
                 </a>
-                <a href="https://nogenergyweek.com" target="_blank" class="speaking-item">
+                <a href="#" target="_blank" class="speaking-item">
                     NOG Energy Week<br>Interviews & Panels
                 </a>
-                <a href="https://bullion.org.ng" target="_blank" class="speaking-item">
+                <a href="#" target="_blank" class="speaking-item">
                     Bullion Lecture Series 2025<br>Powering Nigeria's Economy
                 </a>
-                <a href="https://lawyersinenergy.org" target="_blank" class="speaking-item">
+                <a href="#" target="_blank" class="speaking-item">
                     Lawyers in Energy International Conference
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Community & Affiliations -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Community & Affiliations</h2>
-            <div class="content-card">
-                <h3>Professional & Community Engagement</h3>
-                <p>• Fellow, Nigerian Institution of Surveyors (FNIS)</p>
-                <p>• Member, Institute of Directors (IoD)</p>
-                <p>• Licensed Surveyor (Nigeria and Ontario, Canada)</p>
-                <p>• Knight of St. Christopher (Anglican Communion)</p>
-                <p>• Ugwu Aro honor from Arochukwu Kingdom</p>
-                <p>• Chairman of Patrons Multiethnic Festivals Calgary</p>
-                <p>• Independent Director on several boards</p>
-                <p>• Supporter of scholarships, youth empowerment, and cultural initiatives</p>
             </div>
         </div>
     </section>
