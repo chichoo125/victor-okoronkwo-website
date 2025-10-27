@@ -103,6 +103,21 @@
             font-weight: 300;
         }
 
+        .category-title {
+            font-size: 2rem;
+            color: #0A0A2A;
+            margin-bottom: 40px;
+            text-align: center;
+            border-bottom: 3px solid #0A0A2A;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+
+        .media-category {
+            margin-bottom: 80px;
+        }
+
+        /* Video Grid */
         .video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -161,6 +176,77 @@
             font-style: italic;
         }
 
+        /* Articles Grid */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .article-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(10,10,42,0.1);
+            transition: transform 0.3s ease;
+            border-left: 4px solid #0A0A2A;
+        }
+
+        .article-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .article-content {
+            padding: 30px;
+        }
+
+        .article-content h3 {
+            color: #0A0A2A;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .article-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .article-source {
+            color: #0A0A2A;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .article-date {
+            color: #888;
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+
+        .read-more {
+            display: inline-block;
+            background: #0A0A2A;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .read-more:hover {
+            background: #1A1A4A;
+        }
+
         /* Footer */
         footer {
             background: #0A0A2A;
@@ -180,7 +266,8 @@
                 font-size: 2.5rem;
             }
             
-            .video-grid {
+            .video-grid,
+            .articles-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
@@ -191,6 +278,10 @@
             
             .section-title {
                 font-size: 2rem;
+            }
+            
+            .category-title {
+                font-size: 1.6rem;
             }
         }
 
@@ -208,7 +299,8 @@
                 gap: 1rem;
             }
             
-            .video-info {
+            .video-info,
+            .article-content {
                 padding: 20px;
             }
         }
@@ -233,39 +325,148 @@
     <!-- Media Hero -->
     <section class="media-hero">
         <div class="container">
-            <h1>Media & Interviews</h1>
-            <p>Featured video interviews, conference presentations, and media appearances</p>
+            <h1>Media & Press Coverage</h1>
+            <p>Featured interviews, press coverage, and media appearances highlighting industry leadership and insights</p>
         </div>
     </section>
 
     <!-- Media Content -->
     <section class="media-section">
         <div class="container">
-            <h2 class="section-title">Featured Videos</h2>
-            <div class="video-grid">
-                <!-- Your YouTube Video -->
-                <div class="video-item">
-                    <div class="video-container">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-pCLuUiXFhE?si=WV-nSKa-axF4Jldj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>Industry Leadership Interview</h3>
-                        <p>Discussion on energy sector challenges, opportunities, and the future of African energy development. Insights on Nembe E&P's strategic direction and market positioning.</p>
-                        <div class="video-date">Featured: 2024</div>
-                    </div>
-                </div>
-
-                <!-- Placeholder for More Videos -->
-                <div class="video-item">
-                    <div class="video-container">
-                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f8f9fa; color: #666;">
-                            [Additional Video Coming Soon]
+            <!-- Video Interviews -->
+            <div class="media-category">
+                <h2 class="category-title">Video Interviews & Features</h2>
+                <div class="video-grid">
+                    <!-- Video 1 -->
+                    <div class="video-item">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/5f-VOFVv5Qc?si=iHoYaPGWzeGUwdu1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3>Industry Leadership Interview</h3>
+                            <p>Comprehensive discussion on energy sector challenges, strategic direction, and African energy market insights.</p>
+                            <div class="video-date">Featured Interview</div>
                         </div>
                     </div>
-                    <div class="video-info">
-                        <h3>More Media Content</h3>
-                        <p>Additional interviews, conference presentations, and media features will be added here as they become available.</p>
-                        <div class="video-date">Updated regularly</div>
+
+                    <!-- Video 2 -->
+                    <div class="video-item">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/W25CeQyk9Mg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3>Energy Sector Analysis</h3>
+                            <p>Expert commentary on market developments and strategic outlook for Nigeria's energy industry.</p>
+                            <div class="video-date">Market Analysis Feature</div>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="video-item">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/AOTlN3mHwE4?si=GNrMP_fkQe7WdCjG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3>Live Industry Event</h3>
+                            <p>Live presentation and Q&A session addressing current energy sector challenges and opportunities.</p>
+                            <div class="video-date">Live Conference Session</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Press Articles -->
+            <div class="media-category">
+                <h2 class="category-title">Press Coverage & Articles</h2>
+                <div class="articles-grid">
+                    <!-- Article 1 -->
+                    <div class="article-item">
+                        <div class="article-content">
+                            <span class="article-source">THE BUSINESS YEAR</span>
+                            <h3>Reliable in a Pinch - Industry Leadership Interview</h3>
+                            <p>In-depth executive interview discussing strategic leadership, operational challenges, and the future of Nigeria's energy sector.</p>
+                            <a href="https://thebusinessyear.com/interview/reliable-in-a-pinch/?srsltid=AfmBOoqweCil_HcWt0HNhU5VdRbyyZ71ifw3yiIU_O-bZEaFUtOjnkCh" target="_blank" class="read-more">Read Full Interview</a>
+                        </div>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="article-item">
+                        <div class="article-content">
+                            <span class="article-source">REUTERS</span>
+                            <h3>Nigeria's Aiteo Reports Extremely High Order Oil Spill</h3>
+                            <p>Comprehensive coverage of operational incident and company response, highlighting crisis management and environmental responsibility.</p>
+                            <a href="https://www.reuters.com/world/africa/nigerias-aiteo-reports-extremely-high-order-oil-spill-well-2021-11-10/" target="_blank" class="read-more">Read Reuters Article</a>
+                        </div>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="article-item">
+                        <div class="article-content">
+                            <span class="article-source">THE AFRICA REPORT</span>
+                            <h3>Nigeria's Aiteo in Talks With Lenders to Restructure Debt</h3>
+                            <p>Financial strategy coverage highlighting corporate restructuring and strategic financial management during market challenges.</p>
+                            <a href="https://www.theafricareport.com/34245/nigerias-aiteo-in-talks-with-lenders-to-restructure-debt/" target="_blank" class="read-more">Read Full Article</a>
+                        </div>
+                    </div>
+
+                    <!-- Article 4 -->
+                    <div class="article-item">
+                        <div class="article-content">
+                            <span class="article-source">MAJORWAVES ENERGY REPORT</span>
+                            <h3>Oil and Gas Leaders Charge Africa to Balance Energy Transition and Energy Poverty</h3>
+                            <p>Industry leadership perspective on balancing energy transition goals with addressing energy poverty across African markets.</p>
+                            <a href="https://www.majorwavesenergyreport.com/oil-and-gas-industry-leaders-charge-africa-to-strike-balance-between-energy-transition-energy-poverty/" target="_blank" class="read-more">Read Industry Report</a>
+                        </div>
+                    </div>
+
+                    <!-- Article 5 -->
+                    <div class="article-item">
+                        <div class="article-content">
+                            <span class="article-source">NAIRAMETRICS</span>
+                            <h3>Nigeria Heavily Reliant on Foreign Funding for Oil and Gas Exploration</h3>
+                            <p>Analysis of investment landscape and strategic insights on funding challenges in Nigeria's energy exploration sector.</p>
+                            <a href="https://nairametrics.com/2022/05/05/nigeria-heavily-reliant-on-foreign-funding-for-oil-and-gas-exploration-aiteo/?amp=1" target="_blank" class="read-more">Read Analysis</a>
+                        </div>
+                    </div>
+
+                    <!-- Article 6 -->
+                    <div class="article-item">
+                        <div class="article-content">
+                            <span class="article-source">VANGUARD NIGERIA</span>
+                            <h3>Residents Report Fresh Oil Leak from Aiteo's OML 29 in Nembe</h3>
+                            <p>Local community impact coverage and company response to operational environmental incidents.</p>
+                            <a href="https://www.vanguardngr.com/2022/03/residents-report-fresh-oil-leak-from-aiteos-oml-29-in-nembe/" target="_blank" class="read-more">Read Coverage</a>
+                        </div>
+                    </div>
+
+                    <!-- Article 7 -->
+                    <div class="article-item">
+                        <div class="article-content">
+                            <span class="article-source">NIGER DELTA HERALD</span>
+                            <h3>Bayelsa Govt Threatens to Sanction Aiteo, Pledges to Defend Victims Impacted by Nembe Spill</h3>
+                            <p>Government relations and regulatory compliance coverage following environmental incident response.</p>
+                            <a href="https://nigerdeltaheraldngr.com/bayelsa-govt-threatens-to-sanction-aiteo-pledges-to-defend-victims-impacted-by-nembe-spill/" target="_blank" class="read-more">Read Local Coverage</a>
+                        </div>
+                    </div>
+
+                    <!-- Article 8 -->
+                    <div class="article-item">
+                        <div class="article-content">
+                            <span class="article-source">FRONTPAGE NG</span>
+                            <h3>FG Halts Oil Company Operation in Bayelsa</h3>
+                            <p>Regulatory action coverage and industry compliance reporting on operational suspensions.</p>
+                            <a href="https://frontpageng.com/fg-halts-oil-company-operation-in-bayelsa/" target="_blank" class="read-more">Read News Report</a>
+                        </div>
+                    </div>
+
+                    <!-- Article 9 -->
+                    <div class="article-item">
+                        <div class="article-content">
+                            <span class="article-source">INVESTING.com</span>
+                            <h3>At Least 25 Including Minors Died in Illegal Refinery Blast in Nigeria</h3>
+                            <p>Industry safety and regulatory environment coverage in international financial media.</p>
+                            <a href="https://uk.investing.com/news/commodities-news/at-least-25-including-minors-died-in-illegal-refinery-blast-in-nigeria-2491583" target="_blank" class="read-more">Read International Coverage</a>
+                        </div>
                     </div>
                 </div>
             </div>
