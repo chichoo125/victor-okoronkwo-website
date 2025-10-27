@@ -47,6 +47,11 @@
             font-weight: 300;
         }
 
+        .logo-image {
+            height: 40px;
+            width: auto;
+        }
+
         .nav-menu {
             display: flex;
             list-style: none;
@@ -67,25 +72,72 @@
             background: rgba(255,255,255,0.1);
         }
 
-        /* Hero Section */
+        /* Hero Section with Headshot */
         .hero {
             background: linear-gradient(135deg, #0A0A2A 0%, #1A1A4A 100%);
             color: white;
             padding: 150px 0 100px;
-            text-align: center;
             margin-top: 60px;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+
+        .headshot-container {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 8px solid rgba(255,255,255,0.1);
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .headshot-container::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .headshot-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 400px;
+            text-align: left;
         }
 
         .hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             font-weight: 300;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            line-height: 1.1;
         }
 
         .hero .title {
             font-size: 1.5rem;
             margin-bottom: 10px;
             opacity: 0.9;
+            font-weight: 300;
+            color: #e0e0e0;
         }
 
         .hero .company {
@@ -94,7 +146,18 @@
             margin-bottom: 30px;
         }
 
-        /* Content Sections */
+        .tagline {
+            font-size: 1.3rem;
+            font-style: italic;
+            opacity: 0.8;
+            border-left: 4px solid #4A4A8A;
+            padding-left: 20px;
+            color: #f0f0f0;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+
+        /* Rest of your styles remain the same */
         .section {
             padding: 80px 0;
         }
@@ -256,12 +319,24 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero {
-                padding: 120px 0 60px;
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 50px;
+            }
+            
+            .hero-text {
+                text-align: center;
+                min-width: auto;
             }
             
             .hero h1 {
                 font-size: 2.5rem;
+            }
+            
+            .headshot-container {
+                width: 280px;
+                height: 280px;
             }
             
             .nav-menu {
@@ -282,6 +357,10 @@
         }
 
         @media (max-width: 480px) {
+            .hero {
+                padding: 120px 0 60px;
+            }
+            
             .hero h1 {
                 font-size: 2rem;
             }
@@ -301,7 +380,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <div class="logo">Victor Okoronkwo</div>
+            <div class="logo">
+                <img src="Logo.jpg" alt="Victor Okoronkwo" class="logo-image">
+            </div>
             <ul class="nav-menu">
                 <li><a href="index.html">EXECUTIVE PROFILE</a></li>
                 <li><a href="gallery.html">GALLERY</a></li>
@@ -311,12 +392,22 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Headshot -->
     <header class="hero">
         <div class="container">
-            <h1>Victor Ikechukwu Okoronkwo</h1>
-            <div class="title">Group Managing Director & Chief Executive</div>
-            <div class="company">Nembe Exploration and Production</div>
+            <div class="hero-content">
+                <div class="headshot-container">
+                    <img src="Headshot.jpg" alt="Victor Ikechukwu Okoronkwo" class="headshot-image">
+                </div>
+                <div class="hero-text">
+                    <h1>Victor Ikechukwu<br>Okoronkwo</h1>
+                    <div class="title">Group Managing Director & Chief Executive</div>
+                    <div class="company">Nembe Exploration and Production</div>
+                    <div class="tagline">
+                        "A Titan in Oil, Gas, and Power with over three decades of strategic leadership spanning global giants and independents"
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
