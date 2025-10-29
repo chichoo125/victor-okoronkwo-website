@@ -3,49 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Ikechukwu Victor Okoronkwo - Coming Soon</title>
+    <title>Ikechukwu Victor Okoronkwo - Coming Soon</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpg" href="Logo.jpg">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0A0A2A 0%, #1A1A4A 100%);
-            color: white;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 60px 40px;
             text-align: center;
         }
-        .container {
-            padding: 60px 40px;
+
+        .logo-section {
+            margin-bottom: 50px;
         }
+
+        .logo-placeholder {
+            width: 140px;
+            height: 140px;
+            background: #000000;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 12px;
+            border: 4px solid #000000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .logo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
         h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            color: #000000;
+            text-transform: uppercase;
+        }
+
+        .title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #000000;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .company {
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+            color: #333333;
+            font-weight: 400;
+        }
+
+        .coming-soon-card {
+            background: #000000;
+            color: #ffffff;
+            padding: 50px 40px;
+            border-radius: 8px;
+            margin: 40px 0;
+            border: 3px solid #000000;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .coming-soon-card h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            font-weight: 300;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
         }
-        p {
+
+        .coming-soon-card p {
             font-size: 1.2rem;
             opacity: 0.9;
-            margin: 10px 0;
+            margin-bottom: 15px;
+            font-weight: 500;
         }
-        .contact {
+
+        .status {
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+
+        .contact-info {
             margin-top: 40px;
-            padding: 20px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            display: inline-block;
+            padding-top: 40px;
+            border-top: 2px solid #000000;
+        }
+
+        .contact-info p {
+            color: #000000;
+            margin: 12px 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .strong-text {
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .main-coming-soon {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 30px 0;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .coming-soon-card {
+                padding: 40px 25px;
+            }
+            
+            .coming-soon-card h2 {
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+            
+            .main-coming-soon {
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .logo-placeholder {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .coming-soon-card h2 {
+                font-size: 1.6rem;
+                letter-spacing: 1px;
+            }
+            
+            .main-coming-soon {
+                font-size: 2rem;
+                letter-spacing: 1px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Victor Ikechukwu Okoronkwo</h1>
-        <p>Group Managing Director & CEO</p>
-        <p>Nembe Exploration and Production Limited</p>
-        <div class="contact">
-            <p> Website Coming Soon</p>
+        <div class="logo-section">
+            <div class="logo-placeholder">
+                <img src="Logo.jpg" alt="Ikechukwu Victor Okoronkwo Logo" class="logo-image">
+            </div>
+        </div>
+        
+        <h1>Ikechukwu Victor Okoronkwo</h1>
+        <div class="title">Group Managing Director & Chief Executive</div>
+        <div class="company">Nembe Exploration and Production Limited</div>
+        
+        <!-- ADDED MAIN COMING SOON IN CAPITALS -->
+        <div class="main-coming-soon">COMING SOON</div>
+        
+        <div class="coming-soon-card">
+            <h2>PROFESSIONAL WEBSITE</h2>
+            <p>Currently Under Development</p>
+            <div class="status">Launching 2025</div>
+        </div>
+        
+        <div class="contact-info">
+            <p class="strong-text">ENERGY EXECUTIVE & INDUSTRY LEADER</p>
+            <p>Upstream Operations • Gas Commercialization • Energy Policy</p>
         </div>
     </div>
 </body>
